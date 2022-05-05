@@ -52,7 +52,7 @@ npm install
 | -- | -- | -- |
 | `clientID` | The client ID of the application created | `ZECYcLyBtHDkLtpOSSXKF85jQ2sa` |
 | `clientSecret` | The client secret of the application created | `1_6rdIRx5U3F3mTyKL19vTW9lD0a` |
-| `host` | Host address of the server | `127.0.0.1` (`api.asgardeo.io` for cloud) |
+| `host` | Host address of the server | `127.0.0.1:9443` (`api.asgardeo.io` for cloud) |
 | `tenantName` | Name of the tenant/ organization. Leave this empty if you're not configuring in a tenant environment | `myorg` |
 | `redirectUri` | Redirect url provided for the created application | `http://localhost.com:8080/pickup-dispatch/oauth2client` |
 | `basicAuthCredentials` | Base64 encoded `username:password` for the basic authentication (Only requires in on-prem setup) | `YWRtaW46YWRtaW4=` |

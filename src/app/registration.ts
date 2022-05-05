@@ -35,11 +35,16 @@ export default ({ app }: { app: express.Application }) => {
 
         const extensions = { "example.extension": true };
         const attestationLogic = req.body.attestation == "direct" ? "direct" : "none";
-        let username = userOps.formatUsername(req.body.username);
+        let username;
 
-        invalidUsername = username[0];
-        username = username[1];
-        providedUsername = req.body.username;
+        if (config.isCloudSetup) {
+            username = userOps.formatUsername(req.body.username);
+            invalidUsername = username[0];
+            username = username[1];
+            providedUsername = req.body.username;
+        } else {
+            username = req.body.username;
+        }
 
         // Set user data required to create a user in wso2is.
         const userData = {
