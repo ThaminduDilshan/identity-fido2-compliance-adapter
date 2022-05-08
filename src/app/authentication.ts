@@ -55,8 +55,8 @@ export default ({ app }: { app: express.Application }) => {
             Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*",  
             Authorization: `Basic ${auth}`,
             Connection: "keep-alive",
-            ContentType: "application/json",
-            Host: "localhost:9443"
+            "Content-Type": "application/json",
+            Host: config.host
         };
 
         // start-authentication.

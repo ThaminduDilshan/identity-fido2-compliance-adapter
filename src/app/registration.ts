@@ -26,7 +26,9 @@ export default ({ app }: { app: express.Application }) => {
     /**
      * Credential Creation Options.
      */
-    const appId = "{'appId':'http://localhost:61904'}";
+    const appId = qs.stringify({
+        appId: "http://localhost:61904"
+    });
     let requestId;
 
     app.post("/attestation/options", async (req, res) => {
